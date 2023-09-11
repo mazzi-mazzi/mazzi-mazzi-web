@@ -9,7 +9,7 @@ function ApiClient() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get('http://3.39.160.168:8080/api/home');
+        const response = await axios.get('http://mazzimazzi.store:8080/api/home');
 
         // const responseData = response.data;
         // console.log(responseData);
@@ -26,6 +26,7 @@ function ApiClient() {
   return (
     <div>
       {data ? <p>{data.message}</p> : <p>Loading...</p>}
+      {data ? <p>{data.sos}</p> : <p>Loading...</p>}
     </div>
   );
 }

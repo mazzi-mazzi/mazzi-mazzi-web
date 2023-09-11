@@ -1,4 +1,7 @@
 import { currentUser } from "@clerk/nextjs";
+import ApiClient from "./ApiClient";
+import StravaArc from "./StravaArc";
+import Image from "next/image";
 
 // import UserCard from "../cards/UserCard";
 
@@ -22,6 +25,20 @@ async function RightSidebar() {
         <h3 className='text-heading4-medium text-light-1'>
           Suggested Communities
         </h3>
+
+        <div className='text-heading4-small text-light-1 pt-10'>
+          <ApiClient/>
+        </div>
+
+        <div className="w-128 h-128">
+          <Image
+            src="/dongsang.png"
+            alt="왕복 3시간 반"
+            objectFit="cover"
+            width={512}
+            height={512}
+          />
+        </div>
 
         <div className='mt-7 flex w-[350px] flex-col gap-9'>
           {/* {suggestedCOmmunities.communities.length > 0 ? (
@@ -47,6 +64,9 @@ async function RightSidebar() {
 
       <div className='flex flex-1 flex-col justify-start'>
         <h3 className='text-heading4-medium text-light-1'>Similar Minds</h3>
+
+        {/* <StravaArc/> */}
+
         <div className='mt-7 flex w-[350px] flex-col gap-10'>
           {/* {similarMinds.users.length > 0 ? (
             <>

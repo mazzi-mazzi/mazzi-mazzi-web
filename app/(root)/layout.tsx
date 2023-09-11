@@ -9,7 +9,6 @@ import LeftSidebar from "@/components/shared/LeftSidebar";
 import Bottombar from "@/components/shared/Bottombar";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Topbar from "@/components/shared/Topbar";
-import ApiClient from "@/components/shared/ApiClient";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,8 +42,6 @@ export default function RootLayout({
           </main>
 
           <Bottombar />
-
-          <ApiClient />
         </body>
       </html>
     </ClerkProvider>
